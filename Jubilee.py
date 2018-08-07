@@ -16,7 +16,8 @@ class Jubilee(Xman):
         return
 
     def fight(self, how='energy blast'):
-        print('How do you want to fight?\nChoose: Independence Day, Energy Blast, Photo Flash')
+        power_string = ', '.join(self.power_list)
+        print('How do you want to fight?\nChoose: {}'.format(power_string))
         choice = raw_input('> ')
         if 'day' in choice.lower():
             self._independence_day()
